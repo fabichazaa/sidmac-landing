@@ -3,7 +3,7 @@
 :root {
     --sidmac-orange: #f28724;
     --sidmac-secondary-orange: #f27e11;
-    --sidmac-grey: #e4e4e4;
+    --sidmac-grey: #e9e8e8;
     --sidmac-black: #2c2c2c;
     --sidmac-white: #f9f9f9;
 }
@@ -28,9 +28,14 @@ body {
     background-color: var(--sidmac-grey);
 }
 
+/* ★ -------------- ★ */
+/* ★ GENERAL STYLES ★ */
 .sidmac-orange {
     color: var(--sidmac-secondary-orange);
 }
+
+/* ★ ------------- ★ */
+/* ★ HEADER STYLES ★ */
 .sidmac-header {
     position: relative;
     padding: 1rem 1.5rem;
@@ -77,7 +82,6 @@ body {
     fill: var(--sidmac-black);
 }
 
-
 .sidmac-header-links {
     position: absolute;
     display: flex;
@@ -111,6 +115,8 @@ body {
     text-decoration: underline;
 }
 
+/* ★ ------------------- ★ */
+/* ★ INTRODUCTION STYLES ★ */
 .sidmac-introduction {
     position: relative;
     display: flex;
@@ -176,9 +182,57 @@ body {
 .sidmac-introduction-quality-text {
     display: flex;
     flex-direction: column;
-    row-gap: 0.5rem;
+    row-gap: 0.7rem;
 }
 
 .sidmac-introduction-quality-text p{
-    font-size: 0.65rem;
+    font-size: 0.6rem;
+}
+
+/* ★ ------------------- ★ */
+/* ★ SERVICES STYLES ★ */
+.sidmac-services {
+    margin-top: 11.2rem;
+    text-align: center;
+}
+
+.sidmac-services-cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem 1.4rem;
+    row-gap: 0.6rem;
+}
+
+.sidmac-services-card-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    column-gap: 0.8rem;
+}
+
+.sidmac-services-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    row-gap: 0.5rem;
+    padding: 0.4rem;
+    background-color: var(--sidmac-white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 4px;
+}
+
+.sidmac-services-card img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.sidmac-services-card h3{
+    font-size: 0.8rem;
+    font-weight: normal;
 }
