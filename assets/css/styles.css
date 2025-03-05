@@ -27,6 +27,7 @@ body {
 }
 
 .sidmac-header {
+    position: relative;
     padding: 1rem 1.5rem;
     background-color: var(--sidmac-white);
     display: flex;
@@ -73,5 +74,35 @@ body {
 
 
 .sidmac-header-links {
-    display: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: var(--sidmac-black);
+    color: var(--sidmac-white);
+    list-style: none;
+    z-index: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    
+}
+
+.sidmac-header-links.active {
+    max-height: 300px; /* Adjust based on content size */
+    padding: 1.2rem 1.5rem; /* Add padding only when menu is open */
+
+}
+
+.sidmac-header-link {
+    color: var(--sidmac-white);
+    text-decoration: none;
+}
+
+.sidmac-header-link:focus {
+    text-decoration: underline;
 }
