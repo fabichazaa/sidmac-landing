@@ -2,6 +2,7 @@
 
 :root {
     --sidmac-orange: #f28724;
+    --sidmac-secondary-orange: #f27e11;
     --sidmac-grey: #e4e4e4;
     --sidmac-black: #2c2c2c;
     --sidmac-white: #f9f9f9;
@@ -26,6 +27,9 @@ body {
     color: var(--sidmac-black);
 }
 
+.sidmac-orange {
+    color: var(--sidmac-secondary-orange);
+}
 .sidmac-header {
     position: relative;
     padding: 1rem 1.5rem;
@@ -95,7 +99,6 @@ body {
 .sidmac-header-links.active {
     max-height: 300px; /* Adjust based on content size */
     padding: 1.2rem 1.5rem; /* Add padding only when menu is open */
-
 }
 
 .sidmac-header-link {
@@ -105,4 +108,29 @@ body {
 
 .sidmac-header-link:focus {
     text-decoration: underline;
+}
+
+.sidmac-introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    background-repeat: no-repeat, repeat;
+    background-image: url('../images/sidmac-banner-medium.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.sidmac-introduction-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    width: 46%;
+}
+
+.sidmac-introduction-text p {
+    font-size: 0.85rem;
 }
