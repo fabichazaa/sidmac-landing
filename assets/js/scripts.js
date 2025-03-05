@@ -3,3 +3,6 @@ function toggleHeaderLinks() {
 
 }
 
+function closeHederLinks(){
+    document.querySelector(".sidmac-header-links").classList.remove("active");
+}
