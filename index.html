@@ -72,42 +72,7 @@
                 </div>
             </div>
         </div>
-        <div class="sidmac-services" id="sidmac-services">
-            <h2>Nuestros Servicios</h2>
-            <div class="sidmac-services-cards">
-                <div class="sidmac-services-card-row">
-                    <div class="sidmac-services-card">
-                        <img src="assets/images/sidmac_bobinado_motores.jpg" alt="Bobinado de motores">
-                        <div class="sidmac-services-card-overlay">Bobinado de Motores</div>
-                    </div>
-                    <div class="sidmac-services-card">
-                        <img src="assets/images/sidmac_tablero.jpg" alt="Instalación eléctrica">
-                        <div class="sidmac-services-card-overlay">Instalaciones Eléctricas Domiciliarias</div>
-                    </div>
-                </div>
-                <div class="sidmac-services-card-row">
-                    <div class="sidmac-services-card">
-                        <img src="assets/images/sidmac_bobinado_motor.jpg" alt="Bobinado de motores">
-                        <div class="sidmac-services-card-overlay">Instalación de Cisterna</div>
-                    </div>
-                    <div class="sidmac-services-card">
-                        <img src="assets/images/sidmac_bobinado_motor.jpg" alt="Bomba pileta">
-                        <div class="sidmac-services-card-overlay">Mantenimiento de Bombas de Pileta</div>
-                    </div>
-                </div>
-                <div class="sidmac-services-card-row">
-                    <div class="sidmac-services-card">
-                        <img src="assets/images/sidmac_pergola.jpg" alt="Pergolas">
-                        <div class="sidmac-services-card-overlay">Plomería, pintura, pergolas y pisos</div>
-                    </div>
-                    <div class="sidmac-services-card">
-                        <img src="assets/images/sidmac_instalacion_electrica_domiciliaria.jpg" alt="Bobinado de motores">
-                        <div class="sidmac-services-card-overlay">Mantenimiento de Casas</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sidmac-services-gallery">
+        <div class="sidmac-services-gallery" id="sidmac-services">
             <div class="sidmac-services-gallery-item">
                 <img src="assets/images/sidmac_pergola.jpg" alt="Pergola">
                 <div class="sidmac-services-gallery-item-overlay">Plomería, pintura, pergolas y pisos</div>
@@ -138,69 +103,18 @@
     </main>
 
     <script>
-     function getDominantColor(image) {
-            return new Promise((resolve) => {
-                const canvas = document.createElement("canvas");
-                const ctx = canvas.getContext("2d");
-                image.crossOrigin = "Anonymous";
+    window.addEventListener("load", adjustSpacing);
+    window.addEventListener("resize", adjustSpacing);
 
-                image.onload = function () {
-                    canvas.width = image.naturalWidth;
-                    canvas.height = image.naturalHeight;
-                    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    function adjustSpacing() {
+        const floatingDiv = document.querySelector(".sidmac-introduction-qualities");
+        const nextSection = document.querySelector(".sidmac-services-gallery");
 
-                    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-                    let r = 0, g = 0, b = 0, count = 0;
-
-                    for (let i = 0; i < imageData.length; i += 40) {
-                        r += imageData[i];
-                        g += imageData[i + 1];
-                        b += imageData[i + 2];
-                        count++;
-                    }
-
-                    r = Math.floor(r / count);
-                    g = Math.floor(g / count);
-                    b = Math.floor(b / count);
-
-                    resolve(`rgb(${r},${g},${b})`);
-                };
-            });
+        if (floatingDiv && nextSection) {
+            let floatingHeight = floatingDiv.offsetHeight;
+            nextSection.style.marginTop = floatingHeight + "px";
         }
-
-        function lightenColor(rgb, factor = 0.6) {
-            let [r, g, b] = rgb.match(/\d+/g).map(Number);
-            r = Math.min(255, r + (255 - r) * factor);
-            g = Math.min(255, g + (255 - g) * factor);
-            b = Math.min(255, b + (255 - b) * factor);
-            return `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
-        }
-
-        function transparentColor(rgb, alpha = 0.5) {
-            let [r, g, b] = rgb.match(/\d+/g).map(Number);
-            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-        }
-
-        async function applyColors() {
-            const imageBoxes = document.querySelectorAll(".sidmac-services-card");
-
-            for (const box of imageBoxes) {
-                const img = box.querySelector("img");
-                const overlay = box.querySelector(".sidmac-services-card-overlay");
-
-                const color = await getDominantColor(img);
-                const lighterColor = lightenColor(color);
-
-                box.style.borderColor = lighterColor;
-
-                // Gradient with solid edges and transparent center
-                overlay.style.background = `
-            linear-gradient(to right, ${lighterColor}, ${transparentColor(lighterColor, 0.4)}, ${lighterColor}),
-            linear-gradient(to top, ${lighterColor}, ${transparentColor(lighterColor, 0.3)})
-        `;            }
-        }
-
-        //applyColors();
+    }
     </script>
     <script src="assets/js/scripts.js"></script>
 </body>
