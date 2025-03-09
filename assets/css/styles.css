@@ -228,22 +228,6 @@ body {
     border-radius: 4px;
 }
 
-.sidmac-services-cards img:nth-of-type(1){
-    width: 100%;
-    height: 100%;
-    grid-row-start: 1;
-    grid-row-end: 4;
-}
-
-.sidmac-services-cards img:nth-of-type(2){
-    width: 100%;
-    height: 100%;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 7;
-}
-
 .sidmac-services-card {
     display: flex;
     flex-direction: row;
@@ -253,9 +237,68 @@ body {
     background-color: var(--sidmac-white);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 4px;
+    font-weight: 600;
 }
 
+.sidmac-services-card:nth-of-type(1) {
+    background-image:linear-gradient(
+        rgba(255, 255, 255, 0.85), 
+        rgba(255, 255, 255, 0.85)
+      ), url('../images/sidmac_bobinado_motor.jpg');
+    background-position: center;
+    background-size: cover;
+}
 
+.sidmac-services-card:nth-of-type(1) {
+    background-image:linear-gradient(
+        rgba(255, 255, 255, 0.85), 
+        rgba(255, 255, 255, 0.85)
+      ), url('../images/sidmac_bobinado_motores.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.sidmac-services-card:nth-of-type(2) {
+    background-image:linear-gradient(
+        rgba(255, 255, 255, 0.85), 
+        rgba(255, 255, 255, 0.85)
+      ), url('../images/sidmac_cisterna.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.sidmac-services-card:nth-of-type(3) {
+    background-image:linear-gradient(
+        rgba(255, 255, 255, 0.85), 
+        rgba(255, 255, 255, 0.85)
+      ), url('../images/sidmac_bobinado_motor.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.sidmac-services-card:nth-of-type(4) {
+    background-image:linear-gradient(
+        rgba(255, 255, 255, 0.85), 
+        rgba(255, 255, 255, 0.85)
+      ), url('../images/sidmac_instalacion_electrica_domiciliaria.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.sidmac-services-card:nth-of-type(5) {
+    background-image:linear-gradient(
+        rgba(255, 255, 255, 0.85), 
+        rgba(255, 255, 255, 0.85)
+      ), url('../images/sidmac_instalacion_electrica_tablero_2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.sidmac-services-card:nth-of-type(6) {
+    background-image:linear-gradient(
+        rgba(255, 255, 255, 0.85), 
+        rgba(255, 255, 255, 0.85)
+      ), url('../images/sidmac_pergola.jpg');
+    background-position: center;
+    background-size: cover;
+}
 .sidmac-services-card svg {
     height: 20px;
     width: 20px;
