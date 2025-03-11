@@ -64,7 +64,7 @@ body {
     display: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .sidmac-header-title-text p {
@@ -180,6 +180,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    flex: 1; 
     column-gap: 1rem;
     text-align: left;
     width: 100%;
@@ -278,7 +279,7 @@ body {
 }
 
 footer {
-    background-color: var(--sidmac-orange);
+    background-color: var(--sidmac-black);
     color: var(--sidmac-white);
     text-align: center;
     width: 100%;
@@ -305,4 +306,117 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+
+/*---*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+    body {
+        font-size: 14px;
+    }
+
+    .sidmac-introduction-text {
+        padding: 1rem 1.8rem;
+    }
+
+    .sidmac-introduction-qualities {
+        margin: 1.8rem 2rem;
+        flex-direction: row;
+        align-items: baseline;
+        column-gap: 0.5rem;
+    }
+
+    .sidmac-introduction-quality {
+        padding-bottom: 0 !important;
+        border-bottom: none !important;
+    }
+
+    .sidmac-services-cards {
+        margin: 1.5rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+  
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px)  { 
+    body {
+        font-size: 15px;
+    }
+
+    .sidmac-header-hamburger-button {
+        display: none;
+    }
+    
+    .sidmac-header-links {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 1rem;
+        background-color: transparent;
+        color: var(--sidmac-black);
+        max-height: none;
+    }
+
+    .sidmac-header-link {
+        font-weight: 400;;
+        color: var(--sidmac-black);
+    }
+
+    .sidmac-introduction {
+        height: 300px;
+    }
+
+    .sidmac-introduction-text {
+        padding: 1rem 2.5rem;
+    }
+
+    .sidmac-introduction-qualities {
+        margin: 1.8rem 3rem;
+    }
+}
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    body {
+        font-size: 18px;
+    }
+
+    .sidmac-header-links {
+        column-gap: 1.5rem;
+    }
+
+    .sidmac-introduction {
+        height: 400px;
+        background-image: url(../images/sidmac-banner-big.jpg);
+    }
+
+    .sidmac-introduction-text {
+        padding: 1rem 3rem;
+    }
+
+    .sidmac-introduction-qualities {
+        margin: 1.8rem 5rem;
+        padding: 1.5rem 1.2rem;
+        flex-direction: row;
+        align-items: baseline;
+        column-gap: 0.5rem;
+    }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    body {
+        font-size: 17px;
+    }
+
+    .sidmac-introduction {
+        height: 450px;
+    }
+
+    .sidmac-introduction-text {
+        padding: 1rem 5rem;
+    }
   }
