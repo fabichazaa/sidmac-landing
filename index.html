@@ -173,7 +173,7 @@
         console.log(screenWidth);
         if (floatingDiv && nextSection) {
             if(screenWidth <= 576) {
-                let floatingHeight = floatingDiv.offsetHeight - 4;
+                let floatingHeight = floatingDiv.offsetHeight + 12;
                 nextSection.style.marginTop = floatingHeight + "px";
             } else if(screenWidth > 576) {
                 let floatingHeight = floatingDiv.offsetHeight - 2;
