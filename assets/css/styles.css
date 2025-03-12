@@ -520,6 +520,10 @@ footer {
     }
 
     .sidmac-introduction-text p {
+        font-size: 1rem;
+    }
+
+    .sidmac-introduction-quality-text p {
         font-size: 0.8rem;
     }
 }
