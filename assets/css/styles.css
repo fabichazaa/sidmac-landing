@@ -112,7 +112,8 @@ body {
     font-size: 0.85rem;
 }
 
-.sidmac-header-link:focus {
+.sidmac-header-link:focus,
+.sidmac-header-link:hover {
     text-decoration: underline;
 }
 
@@ -131,6 +132,10 @@ body {
     height: 52px;
 }
 
+.sidmac-whats-app-button img:hover{
+    cursor: pointer;
+}
+
 /* ★ ------------------- ★ */
 /* ★ INTRODUCTION STYLES ★ */
 .sidmac-introduction {
@@ -140,7 +145,7 @@ body {
     justify-content: center;
     height: 200px;
     background-repeat: no-repeat, repeat;
-    background-image: url('../images/sidmac-banner-medium.jpg');
+    background-image: url('../images/sidmac-banner-small.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -192,6 +197,7 @@ body {
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--sidmac-grey);
 }
+
 .sidmac-introduction-quality p{
     font-size: 1rem;
 }
@@ -292,21 +298,21 @@ footer {
     height: 200px;
   }
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
 
 /*---*/
@@ -317,20 +323,45 @@ footer {
         font-size: 14px;
     }
 
+    .sidmac-whats-app-button img {
+        width: 54px;
+        height: 54px;
+    }
+
+    .sidmac-header-title svg,
+    .sidmac-header-hamburger-button svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .sidmac-header-title-text p {
+        font-size: 0.66rem;
+    }
+
+    .sidmac-header-links {
+        row-gap: 1.6rem;
+    }
+
+    .sidmac-header-links.active {
+        padding: 1.5rem;
+    }
+
+    .sidmac-introduction {
+        height: 220px;
+        background-image: url('../images/sidmac-banner-medium.jpg');
+    }
+
     .sidmac-introduction-text {
         padding: 1rem 1.8rem;
     }
 
     .sidmac-introduction-qualities {
-        margin: 1.8rem 2rem;
-        flex-direction: row;
-        align-items: baseline;
-        column-gap: 0.5rem;
+        padding: 1.5rem 1.8rem;
     }
 
-    .sidmac-introduction-quality {
-        padding-bottom: 0 !important;
-        border-bottom: none !important;
+    .sidmac-introduction-quality svg {
+        height: 32px;
+        width: 32px;
     }
 
     .sidmac-services-cards {
@@ -349,6 +380,11 @@ footer {
         display: none;
     }
     
+    .sidmac-header-title-text p {
+        margin-top: -0.3rem;
+        font-size: 0.7rem;
+    }
+
     .sidmac-header-links {
         position: relative;
         display: flex;
@@ -366,57 +402,135 @@ footer {
     }
 
     .sidmac-introduction {
-        height: 300px;
+        height: 250px;
+        background-image: url(../images/sidmac-banner-big.jpg);
     }
 
     .sidmac-introduction-text {
         padding: 1rem 2.5rem;
     }
 
+    .sidmac-introduction-text p {
+        font-size: 0.9rem;
+    }
+    
+    .sidmac-introduction-quality {
+        column-gap: 0.8rem;
+    }
+
     .sidmac-introduction-qualities {
-        margin: 1.8rem 3rem;
+        margin: 1.8rem 2rem;
+        flex-direction: row;
+        align-items: baseline;
+        column-gap: 0.8rem;
+    }
+
+    .sidmac-introduction-quality {
+        padding-bottom: 0 !important;
+        border-bottom: none !important;
     }
 }
 
-  /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) {
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
     body {
         font-size: 18px;
     }
 
+    .sidmac-header-title-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .sidmac-header-title-text p {
+        margin-top: -0.3rem;
+        font-size: 0.7rem;
+    }
+
     .sidmac-header-links {
-        column-gap: 1.5rem;
+        column-gap: 1.6rem;
+    }
+
+    .sidmac-header-link {
+        font-size: 0.9rem;
     }
 
     .sidmac-introduction {
-        height: 400px;
-        background-image: url(../images/sidmac-banner-big.jpg);
+        height: 280px;
     }
 
     .sidmac-introduction-text {
         padding: 1rem 3rem;
     }
 
+    .sidmac-introduction-text p {
+        font-size: 0.92rem;
+    }
+
+    .sidmac-introduction-quality svg {
+        height: 32px;
+        width: 32px;
+    }
+
     .sidmac-introduction-qualities {
         margin: 1.8rem 5rem;
-        padding: 1.5rem 1.2rem;
+        padding: 1.8rem 1.5rem;
         flex-direction: row;
         align-items: baseline;
-        column-gap: 0.5rem;
+        column-gap: 0.6rem;
     }
-  }
-  
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
     body {
         font-size: 17px;
     }
 
+    .sidmac-header-links {
+        column-gap: 2rem;
+    }
+
     .sidmac-introduction {
-        height: 450px;
+        height: 300px;
     }
 
     .sidmac-introduction-text {
         padding: 1rem 5rem;
     }
-  }
+
+    .sidmac-introduction-text p {
+        font-size: 0.95rem;
+    }
+
+    .sidmac-introduction-qualities {
+        margin: 1.8rem 5.5rem;
+        padding: 2em 1.6rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .sidmac-introduction-quality svg,
+    .sidmac-header-title svg {
+        height: 34px;
+        width: 34px;
+    }
+
+    .sidmac-introduction {
+        height: 330px;
+    }
+
+    .sidmac-introduction-text p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1800px) {
+    body {
+        font-size: 18px;
+    }
+
+    .sidmac-introduction {
+        background-image: url('../images/sidmac-banner-medium.jpg');
+        height: 350px;
+    }
+}
