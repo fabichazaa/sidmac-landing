@@ -217,7 +217,7 @@ body {
     row-gap: 0.4rem;
 }
 
-.sidmac-introduction-quality-text p{
+.sidmac-introduction-quality-text p {
     font-size: 0.7rem;
 }
 
@@ -232,8 +232,8 @@ body {
     margin: 3.8rem 0 1.5rem 0;
 }
 
-.sidmac-services h2,
-.sidmac-services p {
+.sidmac-services-title,
+.sidmac-services-sub-title {
     text-align: center;
     padding: 0 1.2rem;
 }
@@ -241,12 +241,12 @@ body {
 .sidmac-services-content {
     display: flex;
     flex-direction: column;
-    margin: 0.3rem 0rem;
+    margin: 0.2rem 0rem;
 }
 
 .sidmac-services-content img {
     width: 100%;
-    height: 250px;
+    height: 240px;
     object-fit: cover;
     object-position: center;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -268,7 +268,6 @@ body {
     justify-content: flex-start;
     row-gap: 0.6rem;
     padding: 0.5rem;
-
 }
 
 .sidmac-services-card svg {
@@ -280,23 +279,13 @@ body {
 }
 
 .sidmac-services-card p {
+    padding: 0 1.2rem;
     font-size: 0.8rem;
-}
-
-footer {
-    background-color: var(--sidmac-black);
-    color: var(--sidmac-white);
     text-align: center;
-    width: 100%;
-    padding: 0.5rem 0;
 }
 
-.swiper {
-    margin: 0 1rem;
-    width: 100%;
-    height: 200px;
-  }
-
+/* ★ --------------- ★ */
+/* ★ SERVICES STYLES ★ */
 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -313,10 +302,23 @@ footer {
     object-fit: cover;
 }
 
+.swiper {
+    margin: 0 1rem;
+    width: 100%;
+    height: 200px;
+}
 
-/*---*/
+/* ★ ------------- ★ */
+/* ★ FOOTER STYLES ★ */
+footer {
+    background-color: var(--sidmac-black);
+    color: var(--sidmac-white);
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0;
+}
 
-/* Small devices (landscape phones, 576px and up) */
+/* ★ SMALL DEVICES (landscape phones, 576px and up) ★ */
 @media (min-width: 576px) {  
     body {
         font-size: 14px;
@@ -371,12 +373,25 @@ footer {
     .sidmac-services-card {
         row-gap: 1rem;
     }
+
+    .sidmac-services-content {
+        margin: 0.4rem 0;
+    }
+
+    .sidmac-services-content img {
+        height: 200px;
+    }
 }
-  
-/* Medium devices (tablets, 768px and up) */
+
+/* ★ MEDIUM DEVICES (tablets, 768px and up) ★ */
 @media (min-width: 768px)  { 
     body {
         font-size: 15px;
+    }
+
+    .sidmac-header-title svg {
+        width: 32px;
+        height: 32px;
     }
 
     .sidmac-header-hamburger-button {
@@ -422,10 +437,20 @@ footer {
     }
 
     .sidmac-introduction-qualities {
-        margin: 1.8rem 2rem;
         flex-direction: row;
         align-items: baseline;
         column-gap: 0.8rem;
+        margin: -2rem 2rem;
+    }
+
+    .sidmac-introduction-quality-text p {
+        font-size: 0.75rem;
+    }
+
+    .sidmac-introduction-quality svg,
+    .sidmac-services-card svg {
+        height: 34px;
+        width: 34px;
     }
 
     .sidmac-introduction-quality {
@@ -438,18 +463,25 @@ footer {
     }
 
     .sidmac-services-content img {
-        flex: 1 1 0;  /* This makes the image grow and shrink properly */
-        width: 100%;  /* Ensures it fills its flex container */
+        width: 100%;
+        max-width: 40%;
+        height: 290px;
         object-fit: cover; /* Ensures proper scaling */
+    }
+
+    .sidmac-services-cards {
+        flex: 1;
+        align-items: center;
+    }
+
+    .sidmac-services-card p {
+        padding: 0 0;
+        font-size: 0.82rem;
     }
 }
 
-/* Large devices (desktops, 992px and up) */
+/* ★ LARGE DEVICES (desktops, 992px and up) ★ */
 @media (min-width: 992px) {
-    body {
-        font-size: 18px;
-    }
-
     .sidmac-header-title-text h1 {
         font-size: 1.8rem;
     }
@@ -485,37 +517,29 @@ footer {
     }
 
     .sidmac-introduction-qualities {
-        margin: 1.8rem 5rem;
+        margin: -2.5rem 5rem;
         padding: 1.8rem 1.5rem;
         flex-direction: row;
         align-items: baseline;
         column-gap: 0.6rem;
     }
 
-    .sidmac-services-content {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 300px;
-        column-gap: 0.8rem;
-        width: 90%;
+    .sidmac-services {
+        margin: 4.5rem 0 2rem 0;
+        row-gap: 0.6rem;
     }
 
-    .sidmac-services-content img {
+    .sidmac-services-content {
         width: 100%;
     }
 
-    .sidmac-services-cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: space-between;
-        border-radius: 4px;
-        padding: 1.2rem;
-        margin: 0;
-        background-color: var(--sidmac-white);
-        border-radius: 4px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    .sidmav-services-card {
+        column-gap: 0.5rem;
+    }
+
+    .sidmac-services-card p {
+        padding: 0 0.5rem;
+        font-size: 0.85rem;
     }
 
     .sidmac-services-card {
@@ -532,7 +556,7 @@ footer {
     }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
+/* ★ EXTRA LARGE DEVICES (large desktops, 1200px and up) ★ */
 @media (min-width: 1200px) {
     body {
         font-size: 17px;
@@ -550,16 +574,68 @@ footer {
         padding: 1rem 5rem;
     }
 
+    .sidmac-introduction-text h2 {
+        font-size: 1.8rem;
+    }
+
     .sidmac-introduction-text p {
         font-size: 0.95rem;
     }
 
+    .sidmac-introduction-quality svg,
+    .sidmac-services-card svg {
+        height: 36px;
+        width: 36px;
+    }
+
     .sidmac-introduction-qualities {
-        margin: 1.8rem 5.5rem;
+        margin: -3rem 4rem;
         padding: 2em 1.6rem;
+        column-gap: 1.2rem;
+    }
+
+    .sidmac-services {
+        margin: 5.5rem 0 2rem 0;
+        row-gap: 0.6rem;
+    }
+    
+    .sidmac-services-title {
+        font-size: 1.5rem;
+    }
+
+    .sidmac-services-sub-title{
+        font-size: 1rem;
+    }
+
+    .sidmac-services-cards {
+        padding: 1rem 2rem;
+    }
+
+    .sidmac-services-content {
+        column-gap: 1.5rem;
+    }
+
+    .sidmac-services-content img {
+        height: 250px;
+        border-radius: 4px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .sidmac-services-cards {
+        border-radius: 4px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .sidmac-services-card {
+        column-gap: 0.5rem;
+    }
+
+    .sidmac-services-card p {
+        font-size: 1rem;
     }
 }
 
+/* ★ EXTRA EXTRA LARGE DEVICES (1600px and up) ★ */
 @media (min-width: 1600px) {
     .sidmac-introduction-quality svg,
     .sidmac-header-title svg {
@@ -578,8 +654,13 @@ footer {
     .sidmac-introduction-quality-text p {
         font-size: 0.8rem;
     }
+
+    .sidmac-services-content img {
+        height: 260px;
+    }
 }
 
+/* ★ EXTRA EXTRA EXTRA LARGE DEVICES (1800px and up) ★ */
 @media (min-width: 1800px) {
     body {
         font-size: 18px;
