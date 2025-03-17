@@ -120,39 +120,48 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                             <path d="M480-400ZM80-160v-400q0-33 23.5-56.5T160-640h120v-80q0-33 23.5-56.5T360-800h240q33 0 56.5 23.5T680-720v80h120q33 0 56.5 23.5T880-560v400H80Zm240-200v40h-80v-40h-80v120h640v-120h-80v40h-80v-40H320ZM160-560v120h80v-40h80v40h320v-40h80v40h80v-120H160Zm200-80h240v-80H360v80Z"/>
                         </svg>
-                        <h4>Plomería, pintura, pergolas y pisos</h4>
+                        <h5>Plomería, pintura, pergolas y pisos</h4>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="swiper mySwiper mobile-swiper" id="sidmac-work-pictures">
+        <div class="swiper mySwiper sidmac-services-mobile-swiper" id="sidmac-work-pictures">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="assets/images/sidmac_light.jpg"/>
+                    <img src="assets/images/sidmac_light.jpg" alt="Luz en el techo"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="assets/images/sidmac_pool.jpg"/>
+                    <img src="assets/images/sidmac_pool.jpg" alt="Esquina de una pileta con palets de madera"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="assets/images/sidmac_electric_board_2.jpg"/>
+                    <img src="assets/images/sidmac_electric_board_2.jpg" alt="Tablero eléctrico"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="assets/images/sidmac_motor_winding_1.jpg"/>
+                    <img src="assets/images/sidmac_motor_winding_1.jpg" alt="Bobinado de motor"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="assets/images/sidmac_working_2.jpg"/>
+                    <img src="assets/images/sidmac_working_2.jpg" alt="Hombre trabajando"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="assets/images/sidmac_cisterna.jpg"/>
+                    <img src="assets/images/sidmac_cisterna.jpg" alt="Cisterna"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="assets/images/sidmac_motor_winding_2.jpg"/>
+                    <img src="assets/images/sidmac_motor_winding_2.jpg" alt="Bobinado de motor"/>
                 </div>
                 <div class="swiper-slide">
-                    <img src="assets/images/sidmac_motor_1.jpg"/>
+                    <img src="assets/images/sidmac_motor_1.jpg" alt="Cinco motores en el piso"/>
                 </div>
             </div>
-        <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="sidmac-services-gallery" id="sidmac-work-pictures">
+            <img src="assets/images/sidmac_motor_winding_2.jpg" alt="Bobinado de motor"/>
+            <img src="assets/images/sidmac_pool.jpg" alt="Esquina de una pileta con palets de madera"/>
+            <img src="assets/images/sidmac_motor_1.jpg" alt="Cinco motores en el piso"/>
+            <img src="assets/images/sidmac_cisterna.jpg" alt="Cisterna"/>
+            <img src="assets/images/sidmac_motor_winding_1.jpg" alt="Bobinado de motor"/>
+            <img src="assets/images/sidmac_working_2.jpg" alt="Hombre trabajando"/>
+            
         </div>
     </main>
     <footer>
@@ -177,6 +186,10 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
+            breakpoints: {
+                576: { slidesPerView: 3 },
+                768: { slidesPerView: 4 },
+            }
         });
     </script>
     <script src="assets/js/scripts.js"></script>
