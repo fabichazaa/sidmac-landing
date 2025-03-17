@@ -27,6 +27,12 @@ body {
     font-weight: normal;
     color: var(--sidmac-black);
     background-color: var(--sidmac-grey);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 /* ★ -------------- ★ */
@@ -249,11 +255,7 @@ body {
     background-position: center;
     background-size: 100% auto;
     background-repeat: no-repeat;
-
     height: 240px;
-
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
 }
 
 .sidmac-services-content img {
@@ -292,31 +294,11 @@ body {
 .sidmac-services-card h4 {
     padding: 0 1.2rem;
     text-align: center;
+    font-weight: normal;
 }
 
 /* ★ --------------- ★ */
 /* ★ SERVICES STYLES ★ */
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.swiper {
-    margin: 0 1rem;
-    width: 100%;
-    height: 200px;
-}
 
 
 
@@ -498,9 +480,18 @@ footer {
         flex-direction: row;
     }
 
-    .sidmac-services-cards {
-        padding: 1.2rem;
+    .sidmac-services-image {
+        width: 45%;
+        background-size: cover;
+        height: auto;
     }
+
+    .sidmac-services-cards {
+        padding: 1.2rem 1rem;
+        width: 100%;
+        row-gap: 0.5rem;
+    }
+
     .sidmac-services-content img {
         height: 200px;
     }
@@ -559,7 +550,7 @@ footer {
     }
 
     .sidmac-services {
-        margin: 4.8rem 3rem 2rem;
+        margin: 4.8rem 5rem 2rem;
         row-gap: 0.6rem;
     }
 
@@ -568,15 +559,13 @@ footer {
         width: auto;
     }
 
-    .sidmac-services-content img {
-        width: 400px;
-        height: 240px;
+    .sidmac-services-image {
+        width: 50%;
         border-radius: 4px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
     .sidmac-services-cards {
-        padding: 0.5rem 0.8rem;
+        padding: 1.2rem;
         border-radius: 4px;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
@@ -585,14 +574,11 @@ footer {
         align-items: center;
         justify-content: flex-start;
         column-gap: 0.4rem;
-        font-size: 0.95rem;
         flex-direction: row;
     }
 
-    .sidmac-services-card p {
+    .sidmac-services-card h4 {
         padding: 0 0.5rem;
-        font-size: 0.85rem;
-        font-weight: 600;
         text-align: left;
     }
 }
@@ -639,37 +625,24 @@ footer {
         margin: 5.5rem 4rem 2rem;
     }
     
-    .sidmac-services-title {
-        font-size: 1.5rem;
-    }
-
-    .sidmac-services-sub-title {
-        font-size: 1rem;
-    }
-
-    .sidmac-services-cards {
-    }
-
     .sidmac-services-content {
         margin-top: 0.4rem;
+        column-gap: 1.2rem;
+        width: 100%;
     }
 
-    .sidmac-services {
-        margin: 5.5rem 3rem 2rem;
+    .sidmac-services-image {
+        width: 55%;
     }
 
     .sidmac-services-cards {
-        padding: 0.5rem 1rem;
+        padding: 1.8rem;
+        row-gap: 1.5rem;
+        column-gap: 1rem;
     }
 
-
- 
     .sidmac-services-card {
-    }
-
-    .sidmac-services-card p {
-        font-size: 0.92rem;
-
+        column-gap: 1rem;
     }
 }
 
@@ -711,5 +684,43 @@ footer {
 
     .sidmac-services-cards {
         padding: 1.5rem;
+    }
+}
+
+/* ★ XXXL DEVICES (1900px and up) ★ */
+@media (min-width: 1900px) {
+    .sidmac-introduction-qualities {
+        margin: -3rem 6rem;
+    }
+
+    .sidmac-services {
+        margin: 6rem 6rem 2rem;
+    }
+
+    .sidmac-services-content {
+        column-gap: 1.5rem;
+    }
+
+    .sidmac-services-cards {
+        padding: 2rem;
+        row-gap: 2.5rem;
+        column-gap: 1rem;
+    }
+}
+
+/* ★ XXXXL LARGE DEVICES (2400px and up) ★ */
+@media (min-width: 2400px) {
+    .sidmac-introduction-qualities {
+        margin: -3rem 8rem;
+    }
+
+    .sidmac-services {
+        margin: 6rem 8rem 2rem;
+    }
+    
+    .sidmac-services-cards {
+        padding: 2rem 3.5rem;
+        row-gap: 2.5rem;
+        column-gap: 1rem;
     }
 }
