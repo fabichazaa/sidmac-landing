@@ -35,6 +35,10 @@ main {
     flex: 1;
 }
 
+textarea {
+    resize: none;
+}
+
 /* ★ -------------- ★ */
 /* ★ GENERAL STYLES ★ */
 .sidmac-orange {
@@ -47,7 +51,6 @@ main {
     border: none;
     padding: 0.5rem 1.2rem;
     border-radius: 4px;
-    font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
 }
@@ -314,7 +317,12 @@ main {
 }
 
 /* ★ -------------------- ★ */
-/* ★ MOBILE SWIPER STYLES ★ */
+/* ★ SWIPER STYLES ★ */
+.sidmac-our-work {
+    text-align: center;
+    margin: 2rem 0;
+
+}
 .sidmac-services-swiper {
     height: 160px;
 }
@@ -360,6 +368,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 0.6rem;
     padding: 1.5rem 2rem;
     margin: 0 2rem;
     border-radius: 4px;
@@ -367,7 +376,6 @@ main {
 }
 
 .sidmac-contact-data {
-    row-gap: 1rem;
     color: white;
     background-color: var(--sidmac-orange);
 }
@@ -404,9 +412,9 @@ main {
 .sidmac-contact-form form {
     display: flex;
     flex-direction: column;
-    row-gap: 0.5rem;
+    row-gap: 0.6rem;
     width: 100%;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 /* ★ ------------- ★ */
@@ -601,6 +609,19 @@ footer {
     .sidmac-services-card p {
         padding: 0 0;
     }
+
+    .sidmac-contact {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        column-gap: 2rem;
+        margin: 2.5rem 2rem;
+    }
+
+    .sidmac-contact-data, 
+    .sidmac-contact-form {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 /* ★ LARGE DEVICES (desktops, 992px and up) ★ */
@@ -660,8 +681,15 @@ footer {
         height: 200px;
     }
 
+    .sidmac-contact {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        column-gap: 1.5rem;
+        margin: 2rem;
+    }
+
     .sidmac-contact-data {
-        margin: 2.5rem 10rem;
+        flex: 1;
     }
 }
 
@@ -714,8 +742,11 @@ footer {
         column-gap: 1rem;
     }
 
-    .sidmac-contact-data {
-        margin: 3rem 10rem;
+    .sidmac-contact {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        column-gap: 2rem;
+        margin: 3.5rem 4rem;
     }
 }
 
@@ -739,84 +770,10 @@ footer {
         font-size: 0.8rem;
     }
 
-    .sidmac-services {
-        margin: 6rem 4rem 2rem;
-    }
-
-    .sidmac-services-content img {
-        width: 550px;
-        height: 280px;
-    }
-    
-    .sidmac-services-content {
-        width: 100%;
-    }
-    .sidmac-services-card p {
-        font-size: 1rem;
-    }
-
-    .sidmac-services-cards {
-        padding: 1.5rem;
-    }
-
-    .sidmac-services-gallery {
-        grid-template-rows: repeat(3, 200px);
-        row-gap: 1.2rem;
-        column-gap: 1.2rem;
-    }
-}
-
-/* ★ XXXL DEVICES (1900px and up) ★ */
-@media (min-width: 1900px) {
-    .sidmac-introduction-qualities {
-        margin: -3rem 6rem;
-    }
-
-    .sidmac-services {
-        margin: 6rem 6rem 2rem;
-    }
-
-    .sidmac-services-content {
-        column-gap: 1.5rem;
-    }
-
-    .sidmac-services-cards {
-        padding: 2rem;
-        row-gap: 2.5rem;
-        column-gap: 1rem;
-    }
-
-    .sidmac-services-gallery {
-        margin: 0 6rem;
-        grid-template-rows: repeat(3, 240px);
-        row-gap: 1.2rem;
-        column-gap: 1.2rem;
-    }
-}
-
-/* ★ XXXXL LARGE DEVICES (2400px and up) ★ */
-@media (min-width: 2400px) {
-    .sidmac-introduction {
-        height: 400px;
-    }
-    .sidmac-introduction-qualities {
-        margin: -3rem 8rem;
-    }
-
-    .sidmac-services {
-        margin: 6rem 8rem 2rem;
-    }
-    
-    .sidmac-services-cards {
-        padding: 2rem 3.5rem;
-        row-gap: 2.5rem;
-        column-gap: 1rem;
-    }
-
-    .sidmac-services-gallery {
-        margin: 0 8rem;
-        grid-template-rows: repeat(3, 300px);
-        row-gap: 1.2rem;
-        column-gap: 1.2rem;
+    .sidmac-contact {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        column-gap: 2rem;
+        margin: 3.5rem 4rem;
     }
 }

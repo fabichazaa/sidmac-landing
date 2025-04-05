@@ -32,7 +32,7 @@
         </button>
         <ul class="sidmac-header-links" id="header-links" toggle-header-links="0">
             <li><a class="sidmac-header-link" onclick="closeHederLinks()" href="#sidmac-services">Nuestros Servicios</a></li>
-            <li><a class="sidmac-header-link" onclick="closeHederLinks()" href="#sidmac-work-pictures">Galería de Trabajos</a></li>
+            <li><a class="sidmac-header-link" onclick="closeHederLinks()" href="#sidmac-our-work">Galería de Trabajos</a></li>
             <li><a class="sidmac-header-link" onclick="closeHederLinks()" href="#sidmac-contact">Contacto</a></li>
         </ul>
     </header>
@@ -48,7 +48,6 @@
                     Ofrecemos soluciones integrales para tu hogar y negocio.
                 </p>
             </div>
-            
         </div>
         <div class="sidmac-introduction-qualities">
             <div class="sidmac-introduction-quality">
@@ -124,32 +123,36 @@
                 </div>
             </div>
         </div>
-        <div class="swiper mySwiper sidmac-services-swiper" id="sidmac-work-pictures">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="assets/images/sidmac_light.jpg" alt="Luz en el techo"/>
+        <div class="sidmac-our-work" id ="sidmac-our-work">
+            <h2>Galería de Trabajos</h2>
+            <div class="swiper mySwiper sidmac-services-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/sidmac_light.jpg" alt="Luz en el techo"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/sidmac_pool.jpg" alt="Esquina de una pileta con palets de madera"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/sidmac_electric_board_2.jpg" alt="Tablero eléctrico"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/sidmac_motor_winding_1.jpg" alt="Bobinado de motor"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/sidmac_cisterna.jpg" alt="Cisterna"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/sidmac_motor_winding_2.jpg" alt="Bobinado de motor"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/sidmac_motor_1.jpg" alt="Cinco motores en el piso"/>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/sidmac_pool.jpg" alt="Esquina de una pileta con palets de madera"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/sidmac_electric_board_2.jpg" alt="Tablero eléctrico"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/sidmac_motor_winding_1.jpg" alt="Bobinado de motor"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/sidmac_cisterna.jpg" alt="Cisterna"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/sidmac_motor_winding_2.jpg" alt="Bobinado de motor"/>
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/sidmac_motor_1.jpg" alt="Cinco motores en el piso"/>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
+        
         <div class="sidmac-contact" id="sidmac-contact">
             <div class="sidmac-contact-data">
                 <h2>Contacto</h2>
@@ -186,16 +189,14 @@
         © 2025 SIDMAC
     </footer>
 
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
         var swiper = new Swiper(".mySwiper", {
             autoplay: { 
-            delay: 2000,  // Auto-slide every 3 seconds
-            disableOnInteraction: false // Keeps autoplay running even if the user interacts
+            delay: 2000,
+            disableOnInteraction: false
             },
             slidesPerView: 2,
             spaceBetween: 12,
