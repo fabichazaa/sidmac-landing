@@ -174,16 +174,16 @@
             <div class="sidmac-contact-form">
                 <h2>Contáctanos</h2>
                 <p>Déjanos un mensaje y nos pondremos en contacto contigo.</p>
-                <form action="https://formspree.io/f/xjvjlqzq" method="POST">
-                    <input type="text" name="name" placeholder="Nombre" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" rows="5" placeholder="Mensaje" required></textarea>
+                <form id="contact-form" onsubmit="event.preventDefault();">
+                    <input id="name" type="text" name="name" placeholder="Nombre" required>
+                    <input id="email" type="email" name="email" placeholder="Email" required>
+                    <textarea id="message" name="message" rows="5" placeholder="Mensaje" required></textarea>
                     <button type="submit" class="sidmac-button">Enviar</button>
                 </form>
+                <p id="statusMessage"></p>
+
             </div>
         </div>
-        
-        
     </main>
     <footer>
         © 2025 SIDMAC
@@ -191,6 +191,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -211,6 +212,35 @@
                 1200: {slidesPerView: 5 },
             }
         });
+
+        const form = document.getElementById("contact-form");
+    const statusMessage = document.getElementById("statusMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      axios.post("https://rvmpxr9np8.execute-api.us-east-1.amazonaws.com/send-email", {
+        name,
+        email,
+        message
+      }, {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      .then(response => {
+        statusMessage.textContent = "Message sent successfully!";
+        form.reset();
+      })
+      .catch(error => {
+        console.error("Error sending email:", error);
+        statusMessage.textContent = "Something went wrong. Please try again later.";
+      });
+    });
     </script>
     <script src="assets/js/scripts.js"></script>
 </body>
